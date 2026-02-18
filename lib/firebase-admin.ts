@@ -2,7 +2,8 @@ import { initializeApp, getApps, cert } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 import { getAuth } from 'firebase-admin/auth';
 
-if (!getApps().length) {
+// Only initialize if not in build mode
+if (!getApps().length && process.env.FIREBASE_ADMIN_PROJECT_ID) {
   initializeApp({
     credential: cert({
       projectId: process.env.FIREBASE_ADMIN_PROJECT_ID,
