@@ -18,6 +18,6 @@ jobs:
           script: |
             cd /var/www/emailzone
             git pull origin main
-            npm install
+            npm install --legacy-peer-deps
             npm run build
             pm2 restart emailzone || pm2 start npm --name emailzone -- start
