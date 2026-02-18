@@ -77,6 +77,3 @@ Next.js 16, React 19, TypeScript, Tailwind, Firebase, Nodemailer
 - Personalize your emails or they'll get ignored
 - Check the logs if stuff breaks
 
-## Deploying
-
-Vercel is easiest. AWS works too. Just set your env vars and deploy.
